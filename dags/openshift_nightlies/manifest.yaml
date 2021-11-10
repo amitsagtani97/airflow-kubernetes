@@ -32,19 +32,6 @@ dagConfig:
 
 platforms:
   cloud:
-    - version: 4.8
-      releaseStream: 4.8.0-0.nightly
-      providers:
-      - name: aws
-        profiles:
-        - default
-        - ovn
-      - name: azure
-        profiles:
-        - default
-      - name: gcp
-        profiles:
-        - default
     - version: 4.9
       releaseStream: 4.9.0-0.nightly
       providers:
@@ -52,12 +39,6 @@ platforms:
         profiles:
         - default
         - ovn
-      - name: azure
-        profiles:
-        - default
-      - name: gcp
-        profiles:
-        - default
     - version: "4.10"
       releaseStream: 4.10.0-0.nightly
       providers:
@@ -66,73 +47,5 @@ platforms:
         - default
         - ovn
         - custom
-      - name: azure
-        profiles:
-        - default
-      - name: gcp
-        profiles:
-        - default    
-  baremetal:
-    - version: 4.7
-      releaseStream: latest-4.7
-      build: dev
-      profiles:
-      - jetski  
-    - version: 4.8
-      releaseStream: latest-4.8
-      build: dev
-      profiles:
-      - jetski
-    - version: 4.9
-      releaseStream: latest-4.9
-      build: dev
-      profiles:
-      - jetski      
-  openstack:
-    versions: [4.9, "4.10"]
-    variants:
-      - name: sdn
-        config:
-          install: openstack/sdn.json
-          benchmarks: openstack.json
-      - name: kuryr
-        config:
-          install: openstack/kuryr.json
-          benchmarks: openstack.json
-
-  rosa:
-    versions: [4.9, "4.10"]
-    variants:
-      - name: sdn-control-plane
-        schedule:  "0 12 * * 1,3,5"
-        config:
-          install: rosa/sdn.json
-          benchmarks: control-plane.json
-      - name: sdn-data-plane
-        schedule: "0 12 * * 1"
-        config:
-          install: rosa/sdn.json
-          benchmarks: data-plane.json
-      - name: ovn-control-plane
-        schedule:  "0 12 * * 1,3,5"
-        config:
-          install: rosa/ovn.json
-          benchmarks: control-plane.json
-      - name: ovn-data-plane
-        schedule: "0 12 * * 1"
-        config:
-          install: rosa/ovn.json
-          benchmarks: data-plane.json
-  rogcp:
-    versions: [4.9, "4.10"]
-    variants:
-      - name: sdn-control-plane
-        schedule:  "0 12 * * 1,3,5"
-        config:
-          install: rogcp/sdn.json
-          benchmarks: control-plane.json
-      - name: sdn-data-plane
-        schedule: "0 12 * * 1"
-        config:
-          install: rogcp/sdn.json
-          benchmarks: data-plane.json
+        - customtwo 
+ 

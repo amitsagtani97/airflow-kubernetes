@@ -1,0 +1,114 @@
+{
+    "benchmarks": [
+        {
+            "name": "scale_100",
+            "workload": "scale-perf",
+            "command": "./run_scale_fromgit.sh",
+            "env": {
+                "SCALE": "100",
+                "METADATA_COLLECTION": "true",
+                "WORKLOAD_NODE_ROLE": "workload",
+                "RUNS": "1"
+            }
+        },
+        {
+            "name": "cluster_density_100_1k",
+            "workload": "kube-burner",
+            "command": "./run_clusterdensity_test_fromgit.sh",
+            "env": {
+                "JOB_ITERATIONS": "1000",
+                "JOB_TIMEOUT": "18000",
+                "STEP_SIZE": "30s",
+                "QPS": "20",
+                "BURST": "20",
+                "METRICS_PROFILE": "metrics-aggregated.yaml",
+                "LOG_LEVEL": "info",
+                "LOG_STREAMING": "true",
+                "CLEANUP_WHEN_FINISH": "true",
+                "CLEANUP": "true",
+                "MUST_GATHER_EACH_TASK": "true",
+                "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+            }
+        },
+    {
+        "name": "scale_250",
+        "workload": "scale-perf",
+        "command": "./run_scale_fromgit.sh",
+        "env": {
+            "SCALE": "250",
+            "METADATA_COLLECTION": "true",
+            "WORKLOAD_NODE_ROLE": "workload",
+            "RUNS": "1"
+        }
+    },
+    {
+        "name": "cluster_density_250_2k",
+        "workload": "kube-burner",
+        "command": "./run_clusterdensity_test_fromgit.sh",
+        "env": {
+            "JOB_ITERATIONS": "2000",
+            "JOB_TIMEOUT": "18000",
+            "STEP_SIZE": "30s",
+            "QPS": "20",
+            "BURST": "20",
+            "METRICS_PROFILE": "metrics-aggregated.yaml",
+            "LOG_LEVEL": "info",
+            "LOG_STREAMING": "true",
+            "CLEANUP_WHEN_FINISH": "true",
+            "CLEANUP": "true",
+            "MUST_GATHER_EACH_TASK": "true",
+            "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+        }
+    },
+    {
+        "name": "cluster_density_250_4k",
+        "workload": "kube-burner",
+        "command": "./run_clusterdensity_test_fromgit.sh",
+        "env": {
+            "JOB_ITERATIONS": "4000",
+            "JOB_TIMEOUT": "18000",
+            "STEP_SIZE": "30s",
+            "QPS": "20",
+            "BURST": "20",
+            "METRICS_PROFILE": "metrics-aggregated.yaml",
+            "LOG_LEVEL": "info",
+            "LOG_STREAMING": "true",
+            "CLEANUP_WHEN_FINISH": "true",
+            "CLEANUP": "true",
+            "MUST_GATHER_EACH_TASK": "true",
+            "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+        }
+    },
+    {
+        "name": "scale_500",
+        "workload": "scale-perf",
+        "command": "./run_scale_fromgit.sh",
+        "env": {
+            "SCALE": "250",
+            "METADATA_COLLECTION": "true",
+            "WORKLOAD_NODE_ROLE": "workload",
+            "RUNS": "1"
+        }
+    },
+    {
+        "name": "cluster_density_500_4k",
+        "workload": "kube-burner",
+        "command": "./run_clusterdensity_test_fromgit.sh",
+        "env": {
+            "JOB_ITERATIONS": "4000",
+            "JOB_TIMEOUT": "18000",
+            "STEP_SIZE": "30s",
+            "QPS": "20",
+            "BURST": "20",
+            "METRICS_PROFILE": "metrics-aggregated.yaml",
+            "LOG_LEVEL": "info",
+            "LOG_STREAMING": "true",
+            "CLEANUP_WHEN_FINISH": "true",
+            "CLEANUP": "true",
+            "MUST_GATHER_EACH_TASK": "true",
+            "NODE_SELECTOR": "{node-role.kubernetes.io/workload: }"
+        }
+    }
+    ]
+
+}
