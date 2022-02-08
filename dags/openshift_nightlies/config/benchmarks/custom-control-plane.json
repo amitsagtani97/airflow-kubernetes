@@ -55,7 +55,7 @@
             }
         },
         {
-            "name": "cluster-density-25",
+            "name": "cluster-density-27",
             "workload": "kube-burner",
             "command": "./run_clusterdensity_test_fromgit.sh",
             "env": {
