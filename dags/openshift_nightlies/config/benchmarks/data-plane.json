@@ -1,69 +1,6 @@
 {
     "benchmarks": [
         {
-            "name": "host-network",
-            "workload": "network-perf",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "hostnet",
-                "PAIRS": "1"
-            }
-        },
-        {
-            "name": "pod-network-1p",
-            "workload": "network-perf",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "pod",
-                "PAIRS": "1"
-            }
-        },
-        {
-            "name": "pod-network-2p",
-            "workload": "network-perf",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "pod",
-                "PAIRS": "2"
-            }
-        },
-        {
-            "name": "pod-network-4p",
-            "workload": "network-perf",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "pod",
-                "PAIRS": "4"
-            }
-        },
-        {
-            "name": "serviceip-network-1p",
-            "workload": "network-perf",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "service",
-                "PAIRS": "1"
-            }
-        },
-        {
-            "name": "serviceip-network-2p",
-            "workload": "network-perf",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "service",
-                "PAIRS": "2"
-            }
-        },
-        {
-            "name": "serviceip-network-4p",
-            "workload": "network-perf",
-            "command": "./run.sh",
-            "env": {
-                "WORKLOAD": "service",
-                "PAIRS": "4"
-            }
-        },
-        {
             "name": "router",
             "workload": "router-perf-v2",
             "command": "./ingress-performance.sh",
@@ -74,7 +11,7 @@
                 "ENGINE": "local",
                 "LARGE_SCALE_ROUTES": "500",
                 "COMPARE": "false",
-                "EMAIL_ID_FOR_RESULTS_SHEET": "msheth@redhat.com",
+                "EMAIL_ID_FOR_RESULTS_SHEET": "asagtani@redhat.com",
                 "GSHEET_KEY_LOCATION": "/tmp/key.json"
             }
         }
